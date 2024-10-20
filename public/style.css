@@ -1,0 +1,159 @@
+/* General body styling */
+body {
+  background-color: #0d0d0d; /* Very dark background for a moody atmosphere */
+  color: #cfcfcf; /* Light gray for text to maintain readability */
+  font-family: 'Verdana', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Import a new sleek sans-serif display font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+/* Import the Bebas Neue font with multiple weights */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;700;900&display=swap');
+
+/* Blade Runner-inspired header styling with Bebas Neue */
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 9rem;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  color: #cfcfcf; /* Fallback color */
+  margin-top: 2.5rem;
+  position: relative;
+  letter-spacing: 0.05em; /* Slightly wider tracking for a futuristic feel */
+  line-height: 0.78;
+  padding: 0.2em 0;
+  overflow: visible; /* Allow the glow to extend outside the container */
+}
+
+/* Gradient and glow effect for the text */
+h1 {
+  background: linear-gradient(90deg, rgba(0, 186, 255, 1) 40%, rgba(255, 0, 127, 1) 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 40px rgba(0, 186, 255, 0.7), 0 0 80px rgba(255, 0, 127, 0.7);
+}
+
+/* Add a sleek, glowing underline */
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00baff, #ff007f);
+  box-shadow: 0 0 15px rgba(0, 186, 255, 0.6), 0 0 30px rgba(255, 0, 127, 0.6);
+  transition: width 0.4s ease;
+}
+
+h1:hover::after {
+  width: 95%;
+}
+
+/* Subtle background effect for a futuristic feel */
+body {
+  background: radial-gradient(circle at top right, #1a1a1a, #0d0d0d);
+}
+
+/* Container styling */
+.container {
+  background-color: rgba(46, 46, 46, 0.8); /* Dark, semi-transparent container background */
+  padding: 2rem;
+  margin: 1.5rem auto;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7); /* Deep shadows for a cinematic effect */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #00baff; /* Neon blue border */
+  box-shadow: 0 0 15px rgba(0, 186, 255, 0.5); /* Glow effect for blue outline */
+}
+
+/* Input fields styling */
+input[type="text"] {
+  width: 90%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ff007f; /* Neon pink border */
+  background-color: #1a1a1a; /* Dark background for inputs */
+  color: #cfcfcf;
+  font-size: 1rem;
+  box-shadow: 0 0 15px rgba(255, 0, 127, 0.5); /* Glow effect for a neon look */
+}
+
+/* Button styling */
+button {
+  background-color: #ff007f; /* Neon pink */
+  color: #0d0d0d; /* Dark text for contrast */
+  font-weight: bold;
+  border: 2px solid #ff007f;
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.7);
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 0, 127, 0.9);
+}
+
+/* Log section */
+h2 {
+  color: #00baff; /* Electric blue color for the text */
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px rgba(0, 186, 255, 0.7), 0 0 40px rgba(0, 186, 255, 0.5); /* Glow effect */
+}
+
+/* Log container styling with pink outline and glow */
+#feed {
+  width: 100%;
+  background-color: rgba(30, 30, 30, 0.8);
+  padding: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ff007f; /* Neon pink border */
+  box-shadow: 0 0 15px rgba(255, 0, 127, 0.5); /* Glow effect for pink outline */
+}
+
+/* Scrollbar styling for #feed */
+#feed::-webkit-scrollbar {
+  width: 8px;
+}
+
+#feed::-webkit-scrollbar-thumb {
+  background-color: #ff007f;
+  border-radius: 10px;
+}
+
+#feed::-webkit-scrollbar-track {
+  background: #2e2e2e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+}
